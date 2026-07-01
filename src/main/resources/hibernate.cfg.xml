@@ -12,18 +12,6 @@
 			com.mysql.cj.jdbc.Driver
 		</property>
 		
-		<property name="hibernate.connection.url">
-			jdbc:mysql://reseau.proxy.rlwy.net:28548/railway?useSSL=true&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC
-		</property>
-		
-		<property name="hibernate.connection.username">
-			root
-		</property>
-		
-		<property name="hibernate.connection.password">
-			ZrRrGnqmqLyQjZSSKFwmTClgZynEQcfc
-		</property>
-		
 		<property name="hibernate.dialect">
 			org.hibernate.dialect.MySQLDialect
 		</property>
@@ -32,9 +20,7 @@
 		
 		<property name="hibernate.format_sql">true</property>
 		
-		<property name="hibernate.hbm2ddl.auto">update</property>
-		
-		
+		<property name="hibernate.hbm2ddl.auto">update</property>	
 		
 	</session-factory>
 	

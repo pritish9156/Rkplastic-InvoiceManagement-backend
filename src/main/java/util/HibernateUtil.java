@@ -9,37 +9,52 @@ import model.Customer;
 
 public class HibernateUtil {
 
-	static SessionFactory sessionFactory = null;
+    private static SessionFactory sessionFactory;
 
-	static {
+    static {
 
-		try {
+        try {
 
-			System.out.println("Hibernate Starting...");
+            System.out.println("Hibernate Starting...");
 
-			Configuration config = new Configuration();
+            Configuration config = new Configuration();
 
-			config.configure();
+            config.configure();
 
-			config.addAnnotatedClass(Customer.class);
+            config.setProperty(
+                    "hibernate.connection.url",
+                    System.getenv("DB_URL"));
 
-			config.addAnnotatedClass(Bill.class);
+            config.setProperty(
+                    "hibernate.connection.username",
+                    System.getenv("DB_USERNAME"));
 
-			config.addAnnotatedClass(BillItem.class);
+            config.setProperty(
+                    "hibernate.connection.password",
+                    System.getenv("DB_PASSWORD"));
 
-			sessionFactory = config.buildSessionFactory();
+            config.addAnnotatedClass(Customer.class);
+            config.addAnnotatedClass(Bill.class);
+            config.addAnnotatedClass(BillItem.class);
 
-			System.out.println("Hibernate Started Successfully");
+            sessionFactory =
+                    config.buildSessionFactory();
 
-		} catch (Exception e) {
+            System.out.println("Hibernate Started Successfully");
 
-			System.out.println("Hibernate Failed");
+        }
+        catch (Exception e) {
 
-			e.printStackTrace();
-		}
-	}
+            e.printStackTrace();
 
-	public static SessionFactory getSessionFactory() {
-		return sessionFactory;
-	}
+        }
+
+    }
+
+    public static SessionFactory getSessionFactory() {
+
+        return sessionFactory;
+
+    }
+
 }
