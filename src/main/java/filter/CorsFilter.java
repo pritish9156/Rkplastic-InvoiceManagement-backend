@@ -35,7 +35,7 @@ public class CorsFilter implements Filter {
 
         resp.setHeader(
                 "Access-Control-Allow-Origin",
-                "http://localhost:5173");
+                "https://rkplastic-invoice-management-fronte.vercel.app");
 
         resp.setHeader(
                 "Access-Control-Allow-Methods",
