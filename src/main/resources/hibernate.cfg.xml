@@ -13,7 +13,7 @@
 		</property>
 		
 		<property name="hibernate.connection.url">
-			jdbc:mysql://localhost:3306/invoice_app
+			jdbc:mysql://reseau.proxy.rlwy.net:28548/railway?useSSL=true&serverTimezone=UTC
 		</property>
 		
 		<property name="hibernate.connection.username">
@@ -21,7 +21,7 @@
 		</property>
 		
 		<property name="hibernate.connection.password">
-			root123
+			ZrRrGnqmqLyQjZSSKFwmTClgZynEQcfc
 		</property>
 		
 		<property name="hibernate.dialect">
