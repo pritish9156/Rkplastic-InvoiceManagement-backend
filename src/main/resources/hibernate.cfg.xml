@@ -13,7 +13,7 @@
 		</property>
 		
 		<property name="hibernate.connection.url">
-			jdbc:mysql://reseau.proxy.rlwy.net:28548/railway?useSSL=true&serverTimezone=UTC
+			mysql://root:ZrRrGnqmqLyQjZSSKFwmTClgZynEQcfc@reseau.proxy.rlwy.net:28548/railway
 		</property>
 		
 		<property name="hibernate.connection.username">
